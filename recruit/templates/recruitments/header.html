@@ -1,0 +1,29 @@
+{% load static %}
+<header>
+    <div class="header-box">
+        <div class="main-img">
+            <a href="{% url 'recruitments:index' %}">
+                Onboarding recruit 
+            </a>
+        </div>
+        <div class="search">
+            <form action="{% url 'recruitments:recruitment_search' %}" method="GET">
+                <input type="text" name="q" placeholder="Search">
+            </form>
+        </div>
+        <div class="header-right">
+            {% if user.cp_id != 1 %} <!--개인회원이 아니면 포스팅 가능-->
+            <div>
+                <a href="{% url 'recruitments:recruitment_create' %}">
+                    <i class="fa fa-plus-circle fa-2x"></i>
+                </a>
+            </div>
+            {% endif %}
+            <div>
+                <a href="#">
+                    <i class="fa fa-user fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

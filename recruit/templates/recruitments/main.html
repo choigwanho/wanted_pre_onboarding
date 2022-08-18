@@ -1,0 +1,58 @@
+{% extends "recruitments/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% for recruitment in recruitments %}
+    <div class="recruitment-box">
+        {% if user.id == recruitment.rc_author.id %}
+        <div class="icon">
+            <a href="{% url 'recruitments:recruitment_update' recruitment.id %}">
+                <i class="fa fa-pencil fa1x"></i>
+            </a>
+            <a href="{% url 'recruitments:recruitment_delete' recruitment.id %}">
+                <i class="fa fa-trash-o fa1x"></i>
+            </a>
+        </div>
+        {% endif %}
+        <table>
+            <tr>
+                <th>
+                    채용포지션
+                </th>
+                <td>
+                    {{ recruitment.rc_position }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    채용보상금
+                </th>
+                <td>
+                    {{ recruitment.rc_reward }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    채용내용
+                </th>
+                <td>
+                    {{ recruitment.rc_content }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    사용기술
+                </th>
+                <td>
+                    {{ recruitment.rc_skill }}
+                </td>
+            </tr>
+            {{ recruitment.rc_author.cp.cp_name }}
+            {{ recruitment.rc_author.cp.cp_nation }}
+            {{ recruitment.rc_author.cp.cp_city }}
+        </table>
+    </div>
+{% endfor %}
+
+{% endblock content %}
