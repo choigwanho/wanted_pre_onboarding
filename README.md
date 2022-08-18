@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 요구사항 해결
 ### 요구사항
 - [O] 1. 채용공고 등록 
@@ -163,3 +164,6 @@ django-admin startapp recruitments
 py manage.py runserver
 ```
 
+=======
+# wanted_pre_onboarding
+>>>>>>> 7fededc976ef65e24ad22cd3d58a0d5681398ab5
