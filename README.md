@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 요구사항 해결
 ### 요구사항
 - [O] 1. 채용공고 등록 
@@ -150,9 +150,8 @@ django-admin startapp recruitments
 ![Image](https://i.imgur.com/VYxmzbo.png)
 
 ## 채용공고 삭제
-- before
-![uploading...](http://i.imgur.com/uploading.png)
-- after
+- 본인이 작성한 글인 경우 휴지통 아이콘 활성화
+- 클릭시 삭제
 ![Image](https://i.imgur.com/A5313Yo.png)
 
 ## 채용공고 검색
@@ -164,6 +163,3 @@ django-admin startapp recruitments
 py manage.py runserver
 ```
 
-=======
-# wanted_pre_onboarding
->>>>>>> 7fededc976ef65e24ad22cd3d58a0d5681398ab5
