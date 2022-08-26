@@ -132,7 +132,7 @@ django-admin startapp recruitments
 ![Image](https://i.imgur.com/CIOt359.png)
 ![Image](https://i.imgur.com/6WA6old.png)
 * 옵션 설명
-1: 개인회원(default), 0: 관리자, 1 ~ N : 회사
+1: 개인회원(default), 0: 관리자, 2 ~ N : 회사
 
 ## 채용공고 목록 조회
 - 회사/관리자 아이디로 로그인 시 오른쪽 상단 (+) 아이콘 활성화
